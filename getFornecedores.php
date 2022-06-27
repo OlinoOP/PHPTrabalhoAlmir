@@ -1,0 +1,79 @@
+<?php
+   include 'conexao.php';
+   $pdo = Conexao::conectar(); 
+   $sql = "select * from fornecedores order by descricao;";
+   $listFornecedores = $pdo->query($sql); 
+   Conexao::desconectar(); 
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Fornecedores</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <!-- Configuração dos ícones -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container ">
+        <h1 class="light-green lighten-4">Listar Fornecedores</h1>
+        <table class="striped">
+            <tr>
+                <th>Cod</th>
+                <th>Descricao</th>
+                <th>Endereco</th>
+                <th>Telefone</th>
+                <th>Cidade</th>
+                <th>UF</th>
+                <th>CNPJ</th>
+                <th class="center">Funções</th>
+                <th>
+                    <a class="btn-floating btn-small waves-effect waves-light green"
+                        onclick="JavaScript:location.href='addFornecedores.php'">
+                        <i class="material-icons">add</i>
+                    </a>
+                </th>
+            </tr>
+
+            <?php 
+           foreach($listFornecedores as $fornecedor){
+        ?>
+            <tr>
+                <td><?php echo $fornecedor['cod']?></td>
+                <td><?php echo $fornecedor['descricao']?></td>
+                <td><?php echo $fornecedor['endereco']?></td>
+                <td><?php echo $fornecedor['telefone']?></td>
+                <td><?php echo $fornecedor['cidade']?></td>
+                <td><?php echo $fornecedor['uf']?></td>
+                <td><?php echo $fornecedor['cnpj']?></td>
+                <td class="center">
+                    <a class="btn-floating btn-small waves-effect waves-light orange" onclick="">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a class="btn-floating btn-small waves-effect waves-light red"
+                        onclick="">
+                        <i class="material-icons">delete</i>
+                    </a>
+                    <a class="btn-floating btn-small waves-effect waves-light light-blue darken-3" onclick="">
+                        <i class="material-icons">info</i>
+                    </a>
+
+                </td>
+                <td></td>
+            </tr>
+            <?php } ?>
+        </table>
+    </div>
+</body>
+</html>
