@@ -37,10 +37,11 @@
                 <th>Estoque Atual</th>
                 <th>Estoque Minimo</th>
                 <th>Estoque Maximo</th>
+                <th>Valor Unitario</th>
                 <th class="center">Funções</th>
                 <th>
                     <a class="btn-floating btn-small waves-effect waves-light green"
-                        onclick="">
+                        onclick="JavaScript:location.href='addProdutos.php'">
                         <i class="material-icons">add</i>
                     </a>
                 </th>
@@ -57,6 +58,7 @@
                 <td><?php echo $produto['estoqueatual']?></td>
                 <td><?php echo $produto['estoquemin']?></td>
                 <td><?php echo $produto['estoquemax']?></td>
+                <td><?php echo $produto['valorunitario']?></td>
                 <td class="center">
                     <a class="btn-floating btn-small waves-effect waves-light orange" onclick="">
                         <i class="material-icons">edit</i>

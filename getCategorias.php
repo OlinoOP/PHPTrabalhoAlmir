@@ -35,7 +35,7 @@
                 <th class="center" >Funções</th>
                 <th>
                     <a class="btn-floating btn-small waves-effect waves-light green"
-                        onclick="">
+                        onclick="JavaScript:location.href='addCategorias.php'">
                         <i class="material-icons">add</i>
                     </a>
                 </th>
