@@ -1,3 +1,6 @@
+<?php
+include 'menu.php'; 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,9 +17,9 @@
     <!-- Configuração dos ícones -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-    <div class="container indigo lighten-3 black-text col s12">
-        <div class="center grey col s12">
+<body style="background-color: gray;">
+    <div class="container light-blue darken-2 black-text col s12">
+        <div class="center black white-text col s12">
             <h1>Inserir Produtos</h1>
         </div>
         <div class="row">
@@ -27,29 +30,29 @@
                 </div>
                 <div class="input-field col s8">
                     <label for="lblFornecedor" class="black-text bold">Cod Fornecedor</label>
-                    <input id="txt_Fornecedor" name = "txt_Fornecedor" type="text">
+                    <input id="txt_Fornecedor" name = "txt_Fornecedor" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblCategoria" class="black-text bold">Cod Categoria:</label>
-                    <input id="txt_categoria" name ="txt_Categoria" type="text">
+                    <input id="txt_categoria" name ="txt_Categoria" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblEstoqueAtual" class="black-text bold">Estoque Atual:</label>
-                    <input id="txt_etqatual" name="txt_EtqAtual" type="text">
+                    <input id="txt_etqatual" name="txt_EtqAtual" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblEstoqueMinimo" class="black-text bold">Estoque Minimo:</label>
-                    <input id="txt_etqminimo" name="txt_EtqMinimo" type="text">
+                    <input id="txt_etqminimo" name="txt_EtqMinimo" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblEstoqueMaximo" class="black-text bold">Estoque Maximo:</label>
-                    <input id="txt_etqmaximo" name="txt_EtqMaximo" type="text">
+                    <input id="txt_etqmaximo" name="txt_EtqMaximo" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblValorUnitario" class="black-text bold">Valor Unitario:</label>
-                    <input id="txt_valorunitario" name="txt_ValorUnitario" type="text">
+                    <input id="txt_valorunitario" name="txt_ValorUnitario" type="number">
                 </div>
-                <div class="grey darken-2 center col s12">
+                <div class="grey darken-4 center col s12">
                    <br/>
                    <button class="btn waves-effect waves-light green" type="submit" name="btnEnviar">Gravar
                        <i class="material-icons right">save</i>

@@ -1,3 +1,6 @@
+<?php
+include 'menu.php'; 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,9 +17,9 @@
     <!-- Configuração dos ícones -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-    <div class="container indigo lighten-3 black-text col s12">
-        <div class="center grey col s12">
+<body style="background-color: gray;">
+    <div class="container light-blue darken-2 black-text col s12">
+        <div class="center black white-text col s12">
             <h1>Inserir Fornecedor</h1>
         </div>
         <div class="row">
@@ -45,7 +48,7 @@
                     <label for="lblCnpj" class="black-text bold">Informe o CNPJ:</label>
                     <input id="txt_cnpj" name="txt_Cnpj" type="text">
                 </div>
-                <div class="grey darken-2 center col s12">
+                <div class="grey darken-4 center col s12">
                    <br/>
                    <button class="btn waves-effect waves-light green" type="submit" name="btnEnviar">Gravar
                        <i class="material-icons right">save</i>

@@ -1,5 +1,5 @@
 <?php 
-
+include 'menu.php'; 
     $cod = $_GET['cod'];
 
     include 'conexao.php';
@@ -31,9 +31,9 @@
     <title>Editar Fornecedores</title>
 </head>
 
-<body>
-    <div class="container indigo lighten-3 black-text col s12">
-        <div class="center grey col s12">
+<body style="background-color: gray;">
+    <div class="container light-blue darken-2 black-text col s12">
+        <div class="center black white-text col s12">
             <h1>Editar Fornecedores</h1>
         </div>
         <div class="row">
@@ -48,29 +48,29 @@
                 </div>
                 <div class="input-field col s8">
                     <label for="lblcodfor" class="black-text bold">Codigo Fornecedor:</label>
-                <input id="txt_codfor" name = "txt_codfor" value="<?php echo $dados['codfor'];?>" type="text">
+                <input id="txt_codfor" name = "txt_codfor" value="<?php echo $dados['codfor'];?>" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblcodcat" class="black-text bold">Codigo Categoria:</label>
-                    <input id="txt_codcat" name ="txt_codcat" value="<?php echo $dados['codcat'];?>" type="text">
+                    <input id="txt_codcat" name ="txt_codcat" value="<?php echo $dados['codcat'];?>" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblEtq" class="black-text bold">Estoque Atual:</label>
-                    <input id="txt_etq" name="txt_etq" value="<?php echo $dados['estoqueatual'];?>" type="text">
+                    <input id="txt_etq" name="txt_etq" value="<?php echo $dados['estoqueatual'];?>" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblmin" class="black-text bold">Estoque Minimo:</label>
-                    <input id="txt_min" name="txt_min" value="<?php echo $dados['estoquemin'];?>" type="text">
+                    <input id="txt_min" name="txt_min" value="<?php echo $dados['estoquemin'];?>" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblmax" class="black-text bold">Estoque Maximo:</label>
-                    <input id="txt_max" name="txt_max" value="<?php echo $dados['estoquemax'];?>" type="text">
+                    <input id="txt_max" name="txt_max" value="<?php echo $dados['estoquemax'];?>" type="number">
                 </div>
                 <div class="input-field col s8">
                     <label for="lblvalorunitario" class="black-text bold">Valor Unitario:</label>
-                    <input id="txt_valorunitario" name="txt_valorunitario" value="<?php echo $dados['valorunitario'];?>" type="text">
+                    <input id="txt_valorunitario" name="txt_valorunitario" value="<?php echo $dados['valorunitario'];?>" type="number">
                 </div>
-                <div class="grey darken-2 center col s12">
+                <div class="grey darken-4 center col s12">
                    <br/>
                    <button class="btn waves-effect waves-light green" type="submit" name="btnEnviar">Gravar
                        <i class="material-icons right">save</i>

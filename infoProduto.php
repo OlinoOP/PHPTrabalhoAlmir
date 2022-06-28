@@ -1,6 +1,6 @@
 <?php 
    $cod = $_GET['cod']; 
-
+   include 'menu.php';
    include 'conexao.php';
    $sql = "select * from produtos where cod=?;";
    $pdo = Conexao::conectar(); 
@@ -41,88 +41,86 @@
     <title>Detalhes do Produto</title>
 </head>
 
-<body>
-    <div class="container indigo lighten-3 black-text col s12">
-        <div class="center grey col s12">
+<body style="background-color: gray;">
+    <div class="container light-blue darken-2 black-text col s12">
+        <div class="center black white-text col s12">
             <h1>Detalhes do Produto</h1>
         </div>
         <div class="row">
             <div class="container">
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lblCod" class="white-text">
+                        <label for="lblCod" class="black-text">
                             <h5><b>Cod: </b><?php echo $produto['cod'];?></h5>
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lbldescricao" class="white-text">
+                        <label for="lbldescricao" class="black-text">
                             <h5><b>Descricao: </b><?php echo $produto['descricao'];?></h5>
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lblestoqueatual" class="white-text">
+                        <label for="lblestoqueatual" class="black-text">
                             <h5><b>Estoque atual: </b><?php echo $produto['estoqueatual'];?></h5>
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lblestoquemin" class="white-text">
+                        <label for="lblestoquemin" class="black-text">
                             <h5><b>Estoque minimo: </b><?php echo $produto['estoquemin'];?></h5>
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lblestoquemax" class="white-text">
+                        <label for="lblestoquemax" class="black-text">
                             <h5><b>Estoque Maximo: </b><?php echo $produto['estoquemax'];?></h5>
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lblValor" class="white-text">
+                        <label for="lblValor" class="black-text">
                             <h5><b>Valor unitario: </b><?php echo $produto['valorunitario'];?></h5>
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lblfornecedordescricao" class="white-text">
+                        <label for="lblfornecedordescricao" class="black-text">
                             <h5><b>Descricao Fornecedor: </b><?php echo $fornecedor['descricao'];?></h5>
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lblfornecedorendereco" class="white-text">
+                        <label for="lblfornecedorendereco" class="black-text">
                             <h5><b>Endereco Fornecedor: </b><?php echo $fornecedor['endereco'];?></h5>
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lblfornecedortel" class="white-text">
+                        <label for="lblfornecedortel" class="black-text">
                             <h5><b>Telefone Fornecedor: </b><?php echo $fornecedor['telefone'];?></h5>
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <label for="lblcategoria" class="white-text">
+                        <label for="lblcategoria" class="black-text">
                             <h5><b>Categoria Produto: </b><?php echo $categoria['descricao'];?></h5>
                         </label>
                     </div>
                 </div>
                 <br />
                 <br />
-                
-            </div>
-            <div class="grey darken-2 col s12 center">
+                <div class="black darken-2 col s12 center">
                     <div class="input-field">
                         <a class="waves-effect waves-light btn green"
                             onclick="JavaScript:location.href='addProdutos.php'">
@@ -140,6 +138,8 @@
                             <i class="material-icons right">list</i>Listar</a>
                     </div>
                 </div>
+            </div>
+            
 
         </div>
     </div>

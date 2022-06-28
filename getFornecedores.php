@@ -1,4 +1,5 @@
 <?php
+   include 'menu.php'; 
    include 'conexao.php';
    $pdo = Conexao::conectar(); 
    $sql = "select * from fornecedores order by descricao;";
@@ -24,10 +25,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
-<body>
+<body style="background-color: gray;">
     
-    <div class="container ">
-        <h1 class="light-green lighten-4">Listar Fornecedores</h1>
+    <div class="container white">
+        <div class="light-blue darken-2 row center"> <h1 >Listar Fornecedores</h1></div>
+        <div class="row">
         <table class="striped">
             <tr>
                 <th>Cod</th>
@@ -72,6 +74,7 @@
             </tr>
             <?php } ?>
         </table>
+        </div>
     </div>
 </body>
 </html>

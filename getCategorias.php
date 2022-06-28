@@ -1,4 +1,5 @@
 <?php
+    include 'menu.php'; 
    include 'conexao.php';
    $pdo = Conexao::conectar(); 
    $sql = "select * from categorias order by descricao;";
@@ -24,10 +25,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
-<body>
+<body style="background-color: gray;">
     
-    <div class="container ">
-        <h1 class="light-green lighten-4">Listar Categorias</h1>
+    <div class="container white">
+        <div class="light-blue darken2 row center">
+        <h1 >Listar Categorias</h1>
+        </div>
         <table class="striped">
             <tr>
                 <th>Cod</th>
