@@ -62,7 +62,7 @@
                         <i class="material-icons">edit</i>
                     </a>
                     <a class="btn-floating btn-small waves-effect waves-light red"
-                        onclick="">
+                        onclick="JavaScript:remover(<?php echo $fornecedor['cod'];?>)">
                         <i class="material-icons">delete</i>
                     </a>
                     <a class="btn-floating btn-small waves-effect waves-light light-blue darken-3" onclick="">
@@ -77,3 +77,11 @@
     </div>
 </body>
 </html>
+
+<script>
+function remover(id) {
+    if (confirm('Excluir o fornecedor ' + id + '?')) {
+        location.href = 'deleteFornecedor.php?id=' + id;
+    }
+}
+</script>
