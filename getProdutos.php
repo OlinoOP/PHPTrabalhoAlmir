@@ -60,14 +60,16 @@
                 <td><?php echo $produto['estoquemax']?></td>
                 <td><?php echo $produto['valorunitario']?></td>
                 <td class="center">
-                    <a class="btn-floating btn-small waves-effect waves-light orange" onclick="">
+                    <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='formEdtProdutos.php?cod=' + 
+                           <?php echo $produto['cod'];?>">
                         <i class="material-icons">edit</i>
                     </a>
                     <a class="btn-floating btn-small waves-effect waves-light red"
                         onclick="JavaScript:remover(<?php echo $produto['cod'];?>)">
                         <i class="material-icons">delete</i>
                     </a>
-                    <a class="btn-floating btn-small waves-effect waves-light light-blue darken-3" onclick="">
+                    <a class="btn-floating btn-small waves-effect waves-light light-blue darken-3" onclick="JavaScript:location.href='infoProduto.php?cod=' + 
+                           <?php echo $produto['cod'];?>">
                         <i class="material-icons">info</i>
                     </a>
 

@@ -48,17 +48,14 @@
                 <td><?php echo $categoria['cod']?></td>
                 <td><?php echo $categoria['descricao']?></td>
                 <td class="center">
-                    <a class="btn-floating btn-small waves-effect waves-light orange" onclick="">
+                    <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='formEdtCategorias.php?cod=' + 
+                           <?php echo $categoria['cod'];?>">
                         <i class="material-icons">edit</i>
                     </a>
                     <a class="btn-floating btn-small waves-effect waves-light red"
                         onclick="JavaScript:remover(<?php echo $categoria['cod'];?>)">
                         <i class="material-icons">delete</i>
                     </a>
-                    <a class="btn-floating btn-small waves-effect waves-light light-blue darken-3" onclick="">
-                        <i class="material-icons">info</i>
-                    </a>
-
                 </td>
                 <td></td>
             </tr>

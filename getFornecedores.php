@@ -58,15 +58,13 @@
                 <td><?php echo $fornecedor['uf']?></td>
                 <td><?php echo $fornecedor['cnpj']?></td>
                 <td class="center">
-                    <a class="btn-floating btn-small waves-effect waves-light orange" onclick="">
+                    <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='formEdtFornecedores.php?cod=' + 
+                           <?php echo $fornecedor['cod'];?>">
                         <i class="material-icons">edit</i>
                     </a>
                     <a class="btn-floating btn-small waves-effect waves-light red"
                         onclick="JavaScript:remover(<?php echo $fornecedor['cod'];?>)">
                         <i class="material-icons">delete</i>
-                    </a>
-                    <a class="btn-floating btn-small waves-effect waves-light light-blue darken-3" onclick="">
-                        <i class="material-icons">info</i>
                     </a>
 
                 </td>
